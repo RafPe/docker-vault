@@ -7,10 +7,10 @@ RUN apt-get update && \
                         vim   \
                         supervisor \
                         curl  \
-    && wget https://releases.hashicorp.com/vault/0.4.1/vault_0.4.1_linux_amd64.zip \
-    && unzip vault_0.4.1_linux_amd64.zip \
+    && wget https://releases.hashicorp.com/vault/0.5.0/vault_0.5.0_linux_amd64.zip \
+    && unzip vault_0.5.0_linux_amd64.zip \
     && mv vault /usr/bin/ \
-    && rm vault_0.4.1_linux_amd64.zip \
+    && rm vault_0.5.0_linux_amd64.zip \
     && mkdir /etc/vault
 
 COPY vault.hcl /etc/vault/vault.hcl
