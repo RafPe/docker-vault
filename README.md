@@ -17,20 +17,11 @@ docker run -d -P --cap-add IPC_LOCK rafpe/docker-vault:latest
 The above command will get you Vault running with default store on file system
 and TLS disabled on API tcp listener endpoint 
 
-## Modyfing config files
-If you would like to modify configuration - image exposes several volumes which
-you can use. 
-
-* /etc/vault
-* /etc/supervisor
-* /data
-
+## Configuration 
 So in case you would like to modify vault config file you could use 
 ```bash 
 docker run -d -v /path-to-file/vault.hcl:/etc/vault/vault.hcl -P --cap-add IPC_LOCK rafpe/docker-vault:latest
 ```
-
-The same applies for supervisord. 
 
 Data volume is for scenarios i.e TLS certificates or other files you would use with vault 
 
