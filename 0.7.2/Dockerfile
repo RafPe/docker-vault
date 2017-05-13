@@ -15,4 +15,4 @@ VOLUME /data
 EXPOSE 8200
 
 ENTRYPOINT ["/usr/bin/vault"]
-CMD ["server", "-dev-listen-address=0.0.0.0:8200", "-dev"]
+CMD ["server", "-dev-listen-address=0.0.0.0:8200", "-dev","-config=/config/vault.hcl"]
